@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  
+
+  <title>Viagem</title>
+
+  
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Menu principal">
+      <ul id="menu">
+        <li class="navegacao active"><a href="#home" aria-label="Home"><i class="fa fa-home"></i></a></li>
+        <li class="navegacao"><a href="#trip-me" aria-label="Minha viagem">TripMe</a></li>
+        <li class="navegacao"><a href="#meet-us" aria-label="Encontre">MeetUs</a></li>
+        <li class="navegacao"><a href="#advice" aria-label="Conselhos">Advice</a></li>
+      </ul>
+    </nav>
+    <button id="toggle-mode" aria-label="Botão escurecer ou clarear">Liga/desliga</button>
+  </header>
+
+  <main id="home" aria-label="Home">
+    <div id="banner" role="img" aria-label="Imagem de um vilarejo na Europa.">
+      <h1>Viagens</h1>
+    </div>
+  </main>
+
+  <section class="tema" id="trip-me" aria-labelledby="titulo1">
+    <h2 id="titulo1">Minha Viagem</h2>
+    <p>Conteúdo da seção minha viagens.</p>
+     <a class="topo" href="#home" aria-label="Home">Home</a>
+  </section>
+
+  <section class="tema" id="meet-us" aria-labelledby="titulo2">
+    <h2 id="titulo2">Nos Encontre</h2>
+    <p>Conteúdo da seção como nos encontrar.</p>
+    <a class="topo" href="#home" aria-label="Home">Home</a>
+  </section>
+
+  <section class="tema" id="advice" aria-labelledby="titulo3">
+    <h2 id="titulo3">Conselhos</h2>
+    <p>Conteúdo da seção com dicas e conselhos.</p>
+    <a class="topo" href="#home" aria-label="Home">Home</a>
+  </section>
+
+  <footer aria-label="Roda pé">
+    <h3>Autor: Edison</h3>
+  </footer>
+
+</body>
+</html>
+<script>
+ document.querySelector("#toggle-mode").addEventListener("click", () => {
+      document.documentElement.classList.toggle("color-blind-friendly");
+    });
+</script>

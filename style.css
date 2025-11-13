@@ -1,0 +1,186 @@
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --background-color: rgba(116,200,131,0.5);
+      --background-color-button: #2a3b4c;
+      --color-link: green;
+      --menu-height: 60px; /* altura do header/menu fixo */
+    }
+
+    html {
+      /* compensa o header fixo em qualquer navegação por âncora */
+      scroll-padding-top: var(--menu-height);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui;
+      color: white;
+      background:
+        linear-gradient(var(--background-color), var(--background-color)),
+        url('https://images.pexels.com/photos/34650319/pexels-photo-34650319.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      padding-top: var(--menu-height);
+      width: auto;
+      height: auto;
+    }
+
+    body::-webkit-scrollbar {
+      display: none; /* esconde a barra */
+    }
+
+    .color-blind-friendly {
+      --background-color: rgba(11,45,20, 0.8);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    main, section[id] {
+      /* cada seção compensa o header ao entrar na viewport por scrollIntoView */
+      scroll-margin-top: var(--menu-height);
+    }
+
+    .container {
+      float: left;
+      margin: 10px;
+    }
+
+    #menu {
+      list-style: none;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
+
+    .navegacao {
+      display: inline-block;
+      margin: 3px;
+      background-color: var(--background-color-button);
+      padding: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navegacao.active {
+      background-color: blue;
+    }
+
+    #menu i {
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 15px;
+      color: white;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: yellow;
+    }
+
+    #toggle-mode {
+      float: right;
+      position: relative;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      background: var(--background-color-button);
+      color: white;
+      width: 100px;
+      height: 38px;
+      padding: 0;
+      border: none;
+      margin: 3px 100px 0 0;
+      cursor: pointer;
+    }
+
+#toggle-mode:hover {
+      background: var(--background-color-button);
+      color: yellow;
+
+    }
+
+
+   #banner h1 {
+      color: white;
+      font-size: 3rem;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+    }
+
+     #banner {
+       background-image: url('https://images.pexels.com/photos/34650319/pexels-photo-34650319.jpeg');
+       background-size: cover;
+       background-position: center;
+       height: 800px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    
+    .tema {
+       padding: 10px;
+       background-color: #8e978d;
+       margin: 120px auto 50px auto;
+       width: 1200px;
+       height: 800px;
+       text-align: center;
+       scroll-margin-top: var(--menu-height);
+   }
+    h2 {
+      padding: 10px;
+    }
+    .topo {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform: rotate(-20deg);
+        top: 50px;
+        color: var(--color-link);
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-size: 30px;
+        font-style: normal;
+     }
+
+     footer {
+        display: inline-block;
+        position: absolute;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+        top: 843px;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        z-index: 1000;
+        padding: 20px;
+        background-color: rgba(75,22,28);
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s
+      }
+      footer:hover {
+        opacity: 1;
+      }
