@@ -99,26 +99,25 @@
 
     #toggle-mode {
       float: right;
-      position: relative;
+      position: absolute;
       z-index: 1000;
-      top: 0;
-      left: 0;
+      top: 3px;
+      right: 200px;
       background: var(--background-color-button);
       color: white;
       width: 100px;
       height: 38px;
       padding: 0;
       border: none;
-      margin: 3px 100px 0 0;
+      /*margin: 3px 100px 0 0;*/
       cursor: pointer;
     }
 
-#toggle-mode:hover {
+    #toggle-mode:hover {
       background: var(--background-color-button);
       color: yellow;
 
     }
-
 
    #banner h1 {
       color: white;
@@ -166,7 +165,7 @@
 
      footer {
         display: inline-block;
-        position: absolute;
+        position: fixed;
         align-items: center;
         text-align: center;
         margin-top: 10px;
